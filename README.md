@@ -1,14 +1,7 @@
-Spring social persistence for MongoDB
-=====================================
+Spring Data MongoDB - Utilities
+===============================
 
-Spring social persistence layer for MongoDB.
-Connects [Spring social](http://www.springsource.org/spring-social) with [MongoDB](http://www.mongodb.org/).
-
-Thanks to
----------
-
-- [Blog post](http://harmonicdevelopment.tumblr.com/post/13613051804/adding-spring-social-to-a-spring-mvc-and-spring) about implementing spring social persistence layer
-- [GitHub repository](https://github.com/CarloMicieli/spring-social-mongo) that this project extends with: removal of depricated query methods, removal of commented code lines, added layers separation
+Utilities for Sprind Data [MongoDB](http://www.mongodb.org/).
 
 
 Maven dependency
@@ -19,11 +12,8 @@ and add dependency.
 
 		
 		<dependency>
-			<groupId>net.exacode.spring.social</groupId>
-			<artifactId>spring-social-mongodb</artifactId>
-			<version>${version.spring-social-mongodb}</version>
+			<groupId>net.exacode.spring.data.mongodb</groupId>
+			<artifactId>spring-data-mongodb-utils</artifactId>
+			<version>${version.spring-data-mongodb-utils}</version>
 		</dependency>
 		
-
-
-<a href='http://www.pledgie.com/campaigns/22342'><img alt='Click here to lend your support to: Exacode open projects and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/22342.png?skin_name=chrome' border='0' /></a>
