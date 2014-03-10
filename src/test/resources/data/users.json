@@ -1,0 +1,12 @@
+{
+	users: [
+		{
+			_id: "sherlock.holmes",
+			email: "sherlock.holmes@xx.xx"
+		},
+		{
+			_id: "john.watson",
+			email: "john.watson@xx.xx"
+		}
+	]
+}
