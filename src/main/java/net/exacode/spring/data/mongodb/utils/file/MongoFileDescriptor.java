@@ -1,4 +1,4 @@
-package net.exacode.spring.data.mongodb.utils.file.simple;
+package net.exacode.spring.data.mongodb.utils.file;
 
 import org.joda.time.DateTime;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -6,34 +6,34 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document
 public class MongoFileDescriptor {
 
-	private final String previousFileId;
+	private final String parentFileId;
 
-	private final String type;
+	private final String contentType;
 
-	private final String userId;
+	private final String ownerId;
 
 	private final long size;
 
 	private final DateTime creationTimestamp;
 
 	private MongoFileDescriptor(Builder builder) {
-		this.previousFileId = builder.previousFileId;
-		this.type = builder.type;
-		this.userId = builder.userId;
+		this.parentFileId = builder.parentFileId;
+		this.contentType = builder.contentType;
+		this.ownerId = builder.userId;
 		this.size = builder.size;
 		this.creationTimestamp = builder.creationTimestamp;
 	}
 
-	public String getPreviousFileId() {
-		return previousFileId;
+	public String getParentFileId() {
+		return parentFileId;
 	}
 
-	public String getType() {
-		return type;
+	public String getContentType() {
+		return contentType;
 	}
 
-	public String getUserId() {
-		return userId;
+	public String getOwnerId() {
+		return ownerId;
 	}
 
 	public long getSize() {
@@ -45,19 +45,19 @@ public class MongoFileDescriptor {
 	}
 
 	public static class Builder {
-		private String previousFileId;
-		private String type;
+		private String parentFileId;
+		private String contentType;
 		private String userId;
 		private long size;
 		private DateTime creationTimestamp = DateTime.now();
 
 		public Builder previousFileId(String previousFileId) {
-			this.previousFileId = previousFileId;
+			this.parentFileId = previousFileId;
 			return this;
 		}
 
-		public Builder type(String type) {
-			this.type = type;
+		public Builder contentType(String type) {
+			this.contentType = type;
 			return this;
 		}
 

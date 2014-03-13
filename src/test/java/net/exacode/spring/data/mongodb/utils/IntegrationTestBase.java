@@ -31,8 +31,15 @@ public abstract class IntegrationTestBase {
 
 	@Before
 	public void before() {
-		logger.trace("Dropped test database");
-		mongo.getDb().dropDatabase();
+		dropCollections();
+	}
+
+	private void dropCollections() {
+		for (String collectionName : mongo.getDb().getCollectionNames()) {
+			if (!collectionName.startsWith("system.")) {
+				mongo.getDb().getCollection(collectionName).drop();
+			}
+		}
 	}
 
 }
